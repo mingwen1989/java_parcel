@@ -17,6 +17,17 @@ public class App {
     }, new VelocityTemplateEngine());
 
     get("/results", (request,res) -> {
+
+      // //check valid query string someday
+      // for (String i : request.queryParams()){
+      //
+      //     System.out.println(request.queryParams(i));
+      //     if(request.queryParams(i)){
+      //       System.out.println("request.queryParams(i)");
+      //     }
+      // }
+
+
       Map<String, Object> model = new HashMap<String, Object>();
 
       Integer widthInput = Integer.parseInt(request.queryParams("widthInput"));
@@ -27,6 +38,14 @@ public class App {
       Parcel newParcel = new Parcel(widthInput, depthInput, heightInput, weightInput);
       String volume = newParcel.volume();
       String costToShip = newParcel.costToShip();
+
+      //if req.queryParams contains wrapping
+      if (request.queryParams().size() > 4){
+
+        // System.out.println("WRAPPED");
+        String wrapCost = newParcel.addWrapping();
+        model.put("wrapCost", wrapCost);
+      }
 
       model.put("costToShip", costToShip);
       model.put("volume", volume);

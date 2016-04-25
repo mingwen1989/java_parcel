@@ -2,4 +2,8 @@
 
 <p>Your package is $volume cubic inches, and your shipping cost is $$costToShip.</p>
 
-<p>Shipping formula: weight * 5 + volume * 2
+<p>Shipping formula: weight * 5 + volume * 2</p>
+
+#if($wrapCost)
+<p>wrapping cost: $wrapCost cents (rate: 1 cent/square inch)</p>
+#end

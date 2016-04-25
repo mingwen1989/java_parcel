@@ -17,7 +17,6 @@ public class Parcel{
   public String volume(){
     // return w*d*h (store as size?)
     Integer size = width * depth * height;
-    System.out.println(size);
     String outSize = Integer.toString(size);
     return outSize;
   }
@@ -27,6 +26,8 @@ public class Parcel{
     return Integer.toString((weight * 5) + (Integer.parseInt(volume()) * 2) );
   }
 
-  //gift wrapping method, height*depth*2 width*depth*2 width*height*2?
-
+  //gift wrapping method, height*depth*2 width*depth*2 width*height*2, return added cost.
+  public String addWrapping(){
+    return Integer.toString((height*depth*2) + (width*depth*2) + (width*height*2));
+  }
 }
