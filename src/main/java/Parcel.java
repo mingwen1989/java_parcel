@@ -27,4 +27,6 @@ public class Parcel{
     return Integer.toString((weight * 5) + (Integer.parseInt(volume()) * 2) );
   }
 
+  //gift wrapping method, height*depth*2 width*depth*2 width*height*2?
+
 }
