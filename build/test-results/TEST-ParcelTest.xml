@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ParcelTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-04-25T18:21:56" hostname="epicodus-55.local" time="0.001">
+  <properties/>
+  <testcase name="newParcel_instantiates_true" classname="ParcelTest" time="0.0"/>
+  <testcase name="newParcel_volumeReturnsCosttoShip_true" classname="ParcelTest" time="0.0"/>
+  <testcase name="newParcel_volumeReturnsDimensionsMultiplied_true" classname="ParcelTest" time="0.001"/>
+  <system-out><![CDATA[8
+8
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
